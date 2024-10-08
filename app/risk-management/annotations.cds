@@ -96,6 +96,11 @@ annotate service.Risks with @(
             Value : impact,
             Criticality : criticality,
         },
+        {
+            $Type : 'UI.DataFieldForAnnotation',
+            Target : 'bp/@Communication.Contact#contact2',
+            Label : '{i18n>BusinessPartner}',
+        },
     ],
     UI.SelectionFields : [
         prio_code,
@@ -141,6 +146,11 @@ annotate service.Risks with @(
                 Value : impact,
                 Label : '{i18n>Impact}',
                 Criticality : criticality,
+            },
+            {
+                $Type : 'UI.DataFieldForAnnotation',
+                Target : 'bp/@Communication.Contact#contact3',
+                Label : '{i18n>BusinessPartner}',
             },
         ],
     },
@@ -224,6 +234,14 @@ annotate service.BusinessPartners with @(
         fn : FullName,
     },
     Communication.Contact #contact1 : {
+        $Type : 'Communication.ContactType',
+        fn : FullName,
+    },
+    Communication.Contact #contact2 : {
+        $Type : 'Communication.ContactType',
+        fn : FullName,
+    },
+    Communication.Contact #contact3 : {
         $Type : 'Communication.ContactType',
         fn : FullName,
     },
