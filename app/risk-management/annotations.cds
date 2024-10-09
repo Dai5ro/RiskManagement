@@ -56,8 +56,8 @@ annotate service.Risks with @(
         },
         {
             $Type : 'UI.CollectionFacet',
-            Label : 'Mitigation Overview',
-            ID : 'MitigationOverview',
+            Label : 'Mitigaton Overview',
+            ID : 'MitigatonOverview',
             Facets : [
                 {
                     $Type : 'UI.ReferenceFacet',
@@ -95,11 +95,6 @@ annotate service.Risks with @(
             Label : '{i18n>Impact}',
             Value : impact,
             Criticality : criticality,
-        },
-        {
-            $Type : 'UI.DataFieldForAnnotation',
-            Target : 'bp/@Communication.Contact#contact2',
-            Label : '{i18n>BusinessPartner}',
         },
     ],
     UI.SelectionFields : [
@@ -144,13 +139,8 @@ annotate service.Risks with @(
             {
                 $Type : 'UI.DataField',
                 Value : impact,
-                Label : '{i18n>Impact}',
+                Label : 'Impact',
                 Criticality : criticality,
-            },
-            {
-                $Type : 'UI.DataFieldForAnnotation',
-                Target : 'bp/@Communication.Contact#contact3',
-                Label : '{i18n>BusinessPartner}',
             },
         ],
     },
@@ -165,7 +155,7 @@ annotate service.Risks with @(
             {
                 $Type : 'UI.DataField',
                 Value : miti.owner,
-                Label : '{i18n>Owner}',
+                Label : 'Owner',
             },
             {
                 $Type : 'UI.DataField',
@@ -234,14 +224,6 @@ annotate service.BusinessPartners with @(
         fn : FullName,
     },
     Communication.Contact #contact1 : {
-        $Type : 'Communication.ContactType',
-        fn : FullName,
-    },
-    Communication.Contact #contact2 : {
-        $Type : 'Communication.ContactType',
-        fn : FullName,
-    },
-    Communication.Contact #contact3 : {
         $Type : 'Communication.ContactType',
         fn : FullName,
     },
